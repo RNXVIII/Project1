@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto:wght@300&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 /* Asterisk wildcard selector to override default styles added by the browser */
 * {
     padding: 0;
@@ -18,20 +16,168 @@ body {
     color: #3a3a3a;
 }
 
+/* overrides default styles added by the browser */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 
 /* Header */
 header {
-    background-color: lightcoral;
+    background-color: rgb(85, 153, 85);
+    padding: 0 2rem;
+    /*to ensure nothing goes over the header*/
+    z-index: 10;
+    position: fixed;
+    /*something i learned from the Love running project*/
+    box-shadow: 0 2px 2px #3a3a3a;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
 }
+
+h1{
+    color : #FFFFFF;
+    font-family: 'Noto Sans', sans-serif;
+    text-transform: capitalize;
+    letter-spacing: 1.5px;
+}
+
+/*dropdown content (this will also include nav content) */
+
+nav{
+    position: absolute;
+    top:100%;
+    left:0;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    width: 100%;
+
+}
+
+a {
+    font-size: 150%;
+    font-family: 'Noto Sans', sans-serif;
+    text-transform: capitalize;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    margin-bottom: 0 1rem;
+    padding: 0 1rem;
+    color: black;
+}
+
+a:hover{
+    background-color: rgb(85, 153, 85);
+    transition-duration: 1.5s;
+    color: #FFFFFF;
+}
+
+
+/*aligning options inside the nav area*/
+nav > ul{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    align-items: center;
+    box-shadow: 0 2px 2px #3a3a3a;
+    background-color: #FFFFFF;
+    width: inherit;
+}
+
+/*getting rid of checkbox*/
+#checkbox-options{
+    display:none;
+}
+
+/*allows for smooth transition*/
+#checkbox-options:checked~nav{
+        opacity: 1;
+        visibility: visible;
+ }
+
 
 /* Main content */
 main {
     background-color: lightblue;
     /* Make main element take up any surplus space to push footer down it does this by getting the flexbox values from body */
     flex: 1 0 auto;
+    margin-top: 47px;
 }
 
 /* Footer */
 footer {
     background-color: orange;
+}
+
+
+/* Adjustments for smaller screens (phones) */
+@media screen and (max-width: 480px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    #logo {
+        font-size: 1.5rem;
+        /* Adjusted font size for smaller screens */
+        margin-bottom: 0.5rem;
+    }
+
+    #checkbox-options {
+        display: none;
+    }
+
+    .checkbox-label {
+        cursor: pointer;
+        color: #fff;
+        font-size: 1rem;
+        /* Adjusted font size for smaller screens */
+        padding: 0.5rem;
+        /* Added padding for smaller screens */
+        margin-bottom: 0.5rem;
+    }
+
+    nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        justify-content: center;
+        opacity: 1;
+        visibility: hidden;
+        width: 100%;
+    }
+
+    a {
+        font-size: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    nav>ul {
+        flex-direction: column;
+    }
+
+    #dropdown-options:checked~.dropdown-content {
+        display: block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        box-shadow: 0 2px 2px #3a3a3a;
+        background-color: #FFFFFF;
+        transition: none;
+        z-index: 1;
+    }
 }
