@@ -16,15 +16,27 @@ body {
     color: #3a3a3a;
 }
 
-/* overrides default styles added by the browser */
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+h1,
+h2,
+h3 {
+    color: #FFFFFF;
+    font-family: 'Noto Sans', sans-serif;
+    text-transform: capitalize;
+    letter-spacing: 1.5px;
 }
 
+a {
+    font-size: 150%;
+    font-family: 'Noto Sans', sans-serif;
+    text-transform: capitalize;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    margin-bottom: 0 1rem;
+    padding: 0 1rem;
+    color: black;
+}
 
-/* Header */
+/* Header------------------------------------------------------------------------------------------------- */
 header {
     background-color: rgb(85, 153, 85);
     padding: 0 2rem;
@@ -40,19 +52,9 @@ header {
 
 }
 
-h1{
-    color : #FFFFFF;
-    font-family: 'Noto Sans', sans-serif;
-    text-transform: capitalize;
-    letter-spacing: 1.5px;
-}
 
-i{
-    font-size: 280%;
-    color: #FFFFFF;
-}
 
-/*dropdown content (this will also include nav content) */
+/*dropdown content (this will also include nav content)------------------------------------------------------- */
 
 nav{
     position: absolute;
@@ -61,25 +63,16 @@ nav{
     justify-content: center;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.2s, visibility 0.2s;
+    transition: opacity 0.4s, visibility 0.4s;
     width: 100%;
 
 }
 
-a {
-    font-size: 150%;
-    font-family: 'Noto Sans', sans-serif;
-    text-transform: capitalize;
-    letter-spacing: 1.5px;
-    text-decoration: none;
-    margin-bottom: 0 1rem;
-    padding: 0 1rem;
-    color: black;
-}
 
-a:hover{
+
+.option:hover{
     background-color: rgb(85, 153, 85);
-    transition-duration: 1.5s;
+    transition-duration: 1.0s;
     color: #FFFFFF;
 }
 
@@ -95,6 +88,11 @@ nav > ul{
     width: inherit;
 }
 
+#nav-icon {
+    font-size: 280%;
+    color: #FFFFFF;
+}
+
 /*getting rid of checkbox*/
 #checkbox-options{
     display:none;
@@ -107,15 +105,49 @@ nav > ul{
  }
 
 
-/* Main content */
+/* Main content ---------------------------------------------------------------------------------------------------------*/
 main {
-    background-color: lightblue;
     /* Make main element take up any surplus space to push footer down it does this by getting the flexbox values from body */
     flex: 1 0 auto;
     margin-top: 47px;
 }
+/* Hero section ---------------------------------------------------------------------------------------------------------*/
+#hero {
+        height: 600px;
+        width: 100%;
+        background: url("../images/Nursehero-image.webp") no-repeat center center/cover;
+        position: relative;
+    
+}
 
-/* Footer */
+#cover-text {
+    /* Final rgba value sets the opacity so it is semi-transparent */
+    background-color: rgb(85, 153, 85, .7);
+    font-size: 130%;
+    position: absolute;
+    bottom: 50%;
+    width: 40%;
+    min-height: 50px;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    margin: auto;
+}
+
+#cover-text-space{
+    margin-bottom: 2px solid white;
+    padding-bottom: 10px;
+}
+
+#cover-text>h2,
+#cover-text>h3 {
+    color: #ffffff;
+}
+
+
+
+/* Footer----------------------------------------------------------------------------------------------------------- */
 
 #social-networks {
     text-align: center;
@@ -123,17 +155,27 @@ main {
     display: flex;
     justify-content: space-evenly;
     list-style-type: none;
+    z-index: 4;
 }
 
 #social-networks i {
-    font-size: 160%;
+    font-size: 100%;
     padding: 5%;
     color: #3a3a3a;
+    z-index: 4;
 }
 
 
-/* Adjustments for smaller screens (phones) */
+/* Adjustments for smaller screens (phones) -----------------------------------------------------------------------*/
 @media screen and (max-width: 480px) {
+    /*generic styles*/
+    h1,
+    h2,
+    h3{
+        font-size: 65%;
+
+    }
+    /*header */
     header {
         display: flex;
         flex-direction: column;
@@ -141,7 +183,24 @@ main {
         align-items: center;
         padding: 1rem;
     }
+    /*nav content*/
+    nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        justify-content: center;
+        opacity: 1;
+        visibility: hidden;
+        width: 100%;
+    }
+    
+    a {
+        font-size: 100%;
+        margin-bottom: 0.5rem;
+    }
 
+
+    /*nav content*/
     #logo {
         font-size: 1.5rem;
         /* Adjusted font size for smaller screens */
@@ -162,20 +221,6 @@ main {
         margin-bottom: 0.5rem;
     }
 
-    nav {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        justify-content: center;
-        opacity: 1;
-        visibility: hidden;
-        width: 100%;
-    }
-
-    a {
-        font-size: 100%;
-        margin-bottom: 0.5rem;
-    }
 
     nav>ul {
         flex-direction: column;
@@ -196,4 +241,15 @@ main {
         transition: none;
         z-index: 1;
     }
+    /*hero content----------------------------------------------------------------------------*/
+    #heroimg{
+        position: relative;
+    }
+    #cover-text{
+        position: absolute;
+        top: 50%;
+        overflow: auto;
+        min-height: fit-content;
+    }
+
 }
