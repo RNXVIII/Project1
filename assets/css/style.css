@@ -32,8 +32,7 @@ a {
     letter-spacing: 1.5px;
     text-decoration: none;
     margin-bottom: 0 1rem;
-    padding: 0 1rem;
-    color: black;
+    color:#3a3a3a;
 }
 
 /* Header------------------------------------------------------------------------------------------------- */
@@ -56,10 +55,11 @@ header {
 
 /*dropdown content (this will also include nav content)------------------------------------------------------- */
 
-nav{
+
+nav {
     position: absolute;
-    top:100%;
-    left:0;
+    top: 100%;
+    left: 0;
     justify-content: center;
     opacity: 0;
     visibility: hidden;
@@ -68,13 +68,17 @@ nav{
 
 }
 
+.option{
+    padding: 0 1rem;
+}
 
 
-.option:hover{
+.option:hover {
     background-color: rgb(85, 153, 85);
     transition-duration: 1.0s;
     color: #FFFFFF;
     width: 100vw;
+    padding: 0 4rem;
 }
 
 /*aligning options inside the nav area*/
@@ -86,9 +90,6 @@ nav>ul {
     box-shadow: 0 2px 2px #3a3a3a;
     background-color: #FFFFFF;
     width: auto;
-    /* Set initial width to auto */
-    transition: width 0.4s;
-    /* Add a transition for smooth animation */
 }
 
 /* Adjust width on hover */
@@ -104,7 +105,7 @@ nav:hover>ul {
 
 /*getting rid of checkbox*/
 #checkbox-options{
-    display:none;
+    display: none;
 }
 
 /*allows for smooth transition*/
@@ -120,20 +121,6 @@ main {
     flex: 1 0 auto;
     margin-top: 47px;
 }
-/*join us content -------------------------------------------------------------------------------------------------------*/
-
-#joinuscontent{
-    background-color: rgb(85, 153, 85) ;
-    display: flex;
-    flex-direction: row;
-}
-
-#textContainer{
-    width: 40%;
-}
-
-
-
 /* Hero section ---------------------------------------------------------------------------------------------------------*/
 #hero {
         height: 100vh;
@@ -141,7 +128,6 @@ main {
         background: url("../images/Nursehero-image.webp") no-repeat center center/cover;
         position: relative;
         box-shadow: 0 2px 2px #3a3a3a;
-        margin-bottom: 15px;
     
 }
 
@@ -169,7 +155,72 @@ main {
 #cover-text>h3 {
     color: #ffffff;
 }
+/*join us content -------------------------------------------------------------------------------------------------------*/
 
+#joinuscontent {
+    background-color: rgb(85, 153, 85);
+    display: flex;
+    flex-direction: row;
+    margin: 15px;
+}
+
+#textContainer {
+    width: 65%;
+    text-align: center;
+}
+
+/*aligning text to the center of the container and also using up the surplus space*/
+#textContainer p{
+    font-family: 'Noto Sans', sans-serif;
+    letter-spacing: 1px;
+    font-size: 20px;
+    color: #FFFFFF;
+    width:fit-content;
+}
+
+#textContainer h2{
+    text-align: center;
+    margin-top: 10px;
+    border-bottom: 1px solid #FFFFFF;
+}
+
+#ImageContainer img {
+    width: 100%;
+    height: 100%;
+}
+
+#buttonContainer{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+
+#buttonContainer button{
+    padding: 10px;
+    background-color: #FFFFFF;
+    color: rgb(85, 153, 85);
+    border: 1px solid rgb(85, 153, 85);
+}
+
+/* default styles for the button link*/
+#buttonContainer a{
+    color: rgb(85, 153, 85);
+}
+
+/*adding hover effects for button*/
+#buttonContainer button:hover{
+        background-color: rgb(46, 86, 46);
+        transition: 0.4s;
+        transition-delay: 0.2s;
+        transition-duration: 0.5s;
+}
+
+/*changing the color of the link when button is hovered over*/
+#buttonContainer button:hover a{
+    color: #FFFFFF;
+    transition-delay: 0.2s;
+    transition-duration: 0.5s;
+}
 
 
 /* Footer----------------------------------------------------------------------------------------------------------- */
@@ -192,7 +243,7 @@ main {
 
 
 /* Adjustments for smaller screens (phones) -----------------------------------------------------------------------*/
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 780px) {
     /*generic styles*/
     h1,
     h2,
@@ -207,6 +258,10 @@ main {
         justify-content: center;
         align-items: center;
         padding: 1rem;
+    }
+    br{
+        padding-top: 5px;
+        padding-bottom: 5px;
     }
     /*nav content------------------------------------------------------------------------------------*/
     nav {
@@ -269,13 +324,16 @@ main {
     #hero{
         position: relative;
         width: 100%;
-        height: 85%;
+        height: 55vh;
+        margin-top: 84px;
+        box-shadow: none;
     }
     #cover-text{
         position: absolute;
         top: 50%;
         overflow: auto;
         min-height: fit-content;
+        margin-bottom: 20px;
     }
     /*Join Us content--------------------------------------------------------------------------*/
     #joinuscontent{
@@ -286,6 +344,24 @@ main {
         width: 100%;
         height: 100%;
         align-content: center;
+        justify-content: center;
+        padding: 1rem;
+
+    }
+    #textContainer{
+        text-align: fit-content;
+        width: fit-content;
+    }
+
+    #textContainer h2{
+        font-size: 24px;
+        letter-spacing: 1.5px;
+    }
+
+    #textContainer p{
+        font-size: 16px;
+        padding-left: 5px;
+        padding-right: 5px;
     }
 }
 
