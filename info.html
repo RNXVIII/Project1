@@ -22,26 +22,67 @@
 <body>
     <!--header-->
     <header>
+    
         <a href="index.html">
-            
             <h1 id="logo">UK Healthcare</h1>
         </a>
         <input type="checkbox" id="checkbox-options">
-        <label for="checkbox-options" class="checkbox-label"><i class="fa-solid fa-bars"></i></label>
+        <label for="checkbox-options" class="checkbox-label"><i class="fa-solid fa-bars" id="nav-icon"></i></label>
         <nav>
             <ul>
-                <li><a href="index.html">home</a></li>
-                <li><a href="#">info</a></li>
-                <li><a href="#">sign-up</a></li>
+                <li><a href="index.html" class="option" target="_blank" aria-label="home page">Home</a></li>
+                <li><a href="info.html" class="option" target="_blank" aria-label="information page">Info</a></li>
+                <li><a href="sign-up.html" class="option" target="_blank" aria-label="sign-up page">Sign-up</a></li>
             </ul>
         </nav>
-
-
-
+    
     </header>
 
     <!--main content-->
-    <main>main content</main>
+    <main>
+
+
+    <content>
+        <!----
+        <div id="icon-container">
+            <p class="image-description">book an appointment</p>
+            <a href="#">
+                <i class="fa-solid fa-calendar-days"></i>
+            </a>
+
+            <h3>find a doctor</h3>
+            <a href="#">
+                <i class="fa-solid fa-user-doctor"></i>
+            </a>
+
+            <h3>Covid information</h3>
+            <a href="#">
+                <i class="fa-solid fa-virus-covid"></i>
+            </a>
+        </div>
+    -->
+
+
+    <h2 id="info-heading" style="text-align:center;">information </h2>
+
+    <div class="icon-container">
+        <h3>Book an appointment </h3>
+                <button><a href="sign-up.html" target="_blank"><i class="fa-solid fa-calendar-days"></i></a></button>
+    </div>
+
+    <div class="icon-container">
+        <h3>Book an appointment </h3>
+        <button><a href="sign-up.html" target="_blank"><i class="fa-solid fa-user-doctor"></i></a></button>
+    </div>
+
+    <div class="icon-container">
+        <h3>Book an appointment </h3>
+        <button><a href="sign-up.html" target="_blank"><i class="fa-solid fa-virus-covid"></i></a></button>
+    </div>
+    </content>
+
+
+    </main>
 
     <!-- Footer -->
     <footer>

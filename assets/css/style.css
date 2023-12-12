@@ -266,6 +266,64 @@ main {
     transition-duration: 0.5s;
 }
 
+/*information page---------------------------------------------------------------------------------------------------*/
+
+
+/*table content----------------------------------------------------------------------------------------------------*/
+
+#info-heading{
+    color: #3a3a3a;
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.icon-container{
+    border: 3px solid rgb(85, 153, 85);
+    padding: 15px;
+    width: 55vw;
+    text-align: center;
+    left: 35%;
+    right: 35%;
+    margin: 20px auto;
+
+}
+
+.icon-container a{
+    color: rgb(85, 153, 85);
+}
+.icon-container h3{
+    color: #3a3a3a;
+    font-size: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+.icon-container button{
+    padding: 10px;
+    background-color: #FFFFFF;
+    border: 1px solid rgb(85, 153, 85);
+    text-align: center;
+    margin-top: 10px;
+}
+
+.icon-container i{
+    font-size: 45px;
+}
+
+.icon-container button:hover{
+    background-color: rgb(85, 153, 85);
+    transition: 0.4s;
+    transition-delay: 0.2s;
+    transition-duration: 0.5s;
+}
+
+.icon-container button:hover i{
+    color: #FFFFFF;
+    transition: 0.4s;
+    transition-delay: 0.2s;
+    transition-duration: 0.5s;
+}
+
+/*on hover for the buttons*/
 
 /* Footer----------------------------------------------------------------------------------------------------------- */
 
