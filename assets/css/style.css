@@ -31,7 +31,6 @@ a {
     text-transform: capitalize;
     letter-spacing: 1.5px;
     text-decoration: none;
-    margin-bottom: 0 1rem;
     color:#3a3a3a;
 }
 
@@ -147,7 +146,7 @@ main {
 }
 
 #cover-text-space{
-    margin-bottom: 2px solid white;
+    margin-bottom: 2px;
     padding-bottom: 10px;
 }
 
@@ -241,19 +240,19 @@ main {
 
 #buttonContainer button{
     padding: 10px;
+    font-size: 18px;
     background-color: #FFFFFF;
     color: rgb(85, 153, 85);
     border: 1px solid rgb(85, 153, 85);
 }
 
 /* default styles for the button link*/
-#buttonContainer a{
-    color: rgb(85, 153, 85);
-}
+
 
 /*adding hover effects for button*/
 #buttonContainer button:hover{
-        background-color: rgb(46, 86, 46);
+        background-color: red;
+        color: #FFFFFF;
         transition: 0.4s;
         transition-delay: 0.2s;
         transition-duration: 0.5s;
@@ -404,8 +403,72 @@ main {
 /*sign up page------------------------------------------------------------------------------------------------------*/
 
 
-/*form-------------------------------------------------------------------------------------------------------------*/
+/*form---------------------------------------------------------*/
+#signup {
+    background-image: url("../images/sign-up-image.webp");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: 75%;
+    padding: 20px 10% 0 10%;
+    flex-grow: 1;
+    position: absolute;
+    overflow: auto;
+    /*getting it to go below the header*/
+    margin-top: 47px;
+}
 
+#signup-form {
+    color: #ffffff;
+    background-color: rgb(85, 153, 85, .7);
+    padding: 20px;
+    width: fit-content;
+    margin-top: 120px;
+    width: 55vw;
+    text-align: center;
+    left: 35%;
+    right: 35%;
+    margin: 20px auto;
+}
+
+#signup-form>h2 {
+    color: #fafafa;
+    margin-bottom: 20px;
+}
+
+#signup-form label{
+    font-family: 'Noto Sans',sans-serif;
+}
+
+#email_address ::placeholder{
+    color: #FFFFFF;
+
+}
+
+.text-input {
+    background-color: #FFFFFF;
+    background: transparent;
+    color: #fafafa;
+    width: 100%;
+    height: 25px;
+    margin: 5px 0 20px 0;
+    border: 1px solid #fafafa;
+    border-radius: 2px;
+    padding: 0 5px;
+}
+
+.text-input ::placeholder{
+    color: #FFFFFF;
+}
+
+.join-button {
+    margin-top: 20px;
+    border-radius: 2px;
+    padding: 15px 32px;
+    font-size: 100%;
+    background-color: rgb(85, 153, 85);
+    color: #fafafa;
+}
 /* Footer----------------------------------------------------------------------------------------------------------- */
 
 #social-networks {
@@ -554,7 +617,6 @@ main {
 
     }
     #textContainer{
-        text-align: fit-content;
         width: fit-content;
     }
 
@@ -575,6 +637,11 @@ main {
         font-size: 20px;
     }
 
+    /*signup page-----------------------------------------------------------------------------------------*/
+        #signup-form label {
+            font-size: 16px;
+        }
+
 }
 
 @media screen and (min-Height: 1300px ){
@@ -584,10 +651,55 @@ main {
     }
     /*hero content*/
     #hero{
-        height: 100vh;
+        height: 65vh;
     }
     #cover-text{
         width: 50%;
         font-size: 160%;
+        margin-bottom: 150px;
+        position: absolute;
     }
+
+    /*why choose our healthcare content*/
+
+    #sign-up-info p{
+        font-size: 24px;
+    }
+
+    /*about us content---------------*/
+
+        #joinuscontent {
+            display: flex;
+            flex-direction: column;
+            margin: 15px;
+        }
+    
+        #ImageContainer img {
+            width: 100%;
+            height: 100%;
+            align-content: center;
+            justify-content: center;
+            padding: 1rem;
+    
+        }
+    
+        #textContainer {
+            width: fit-content;
+        }
+    
+        #textContainer h2 {
+            font-size: 34px;
+            letter-spacing: 1.5px;
+        }
+    
+        #textContainer p {
+            font-size: 24px;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+        /*sign up page----------------------------------------*/
+        #signup-form{
+            font-size: 22px;
+        }
+
 }
